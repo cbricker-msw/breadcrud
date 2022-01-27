@@ -7,20 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cbricker-msw/breadcrud.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cbricker-msw/breadcrud/issues"
-  },
-  "homepage": "https://github.com/cbricker-msw/breadcrud#readme",
   "dependencies": {
     "dotenv": "^11.0.0",
     "express": "^4.17.2",
-    "express-react-views": "^0.11.0"
+    "express-react-views": "^0.11.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.1.8",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   }
 }
