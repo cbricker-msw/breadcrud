@@ -28,13 +28,18 @@ app.get('/', (req, res) => {
 })
   
 // Breads
-  const breadsController = require('./controllers/breads_controller.js')
-  app.use('/breads', breadsController)
+const breadsController = require('./controllers/breads_controller.js')
+app.use('/breads', breadsController)
 
-  app.get('*', (req, res) => {
-    res.send('404')
-  })
-  
+// Bakers
+const bakersController = require('./controllers/bakers_controller.js')
+app.use('/bakers', bakersController)
+
+// 404 Page
+app.get('*', (req, res) => {
+  res.send('404')
+})
+
 // LISTEN
 app.listen(PORT, () => {
   console.log('nomming at port', PORT);
