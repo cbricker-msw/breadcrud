@@ -32,11 +32,13 @@ breads.get('/:id/edit', (req, res) => {
 breads.get('/:id', (req, res) => {
   Bread.findById(req.params.id)
       .then(foundBread => {
-        res.render("show", {
-          bread: foundBread
+        const bakedBy = foundBread.getBakedBy() 
+        console.log(bakedBy)
+        res.render('show', {
+            bread: foundBread
         })
       })
-})
+    })
 
 // CREATE
 breads.post('/', (req, res) => {
@@ -59,7 +61,7 @@ breads.put('/:id', (req, res) => {
   } else {
     req.body.hasGluten = false
   }
-  Bread.findByIdAndUpdate(req.params.id, req.body, { new: true }) 
+  Bread.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true }) 
     .then(updatedBread => {
       console.log(updatedBread) 
       res.redirect(`/breads/${req.params.id}`) 
