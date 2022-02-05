@@ -1,6 +1,9 @@
 {
   "name": "breadcrud",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.15.4"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -14,9 +17,10 @@
     "dotenv": "^11.0.0",
     "express": "^4.17.2",
     "express-react-views": "^0.11.0",
+    "mdb-react-ui-kit": "^2.3.0",
     "method-override": "^3.0.0",
     "mongoose": "^6.1.8",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
